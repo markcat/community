@@ -35,4 +35,9 @@ public class CommunityIndexController {
 		return "/manager/manager_login";
 	}
 	
+	@RequestMapping("/verifyLogin")
+	public String verify(){
+		
+		return "redirect:/manager/communityindex";
+	}
 }

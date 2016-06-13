@@ -15,13 +15,13 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>天地窖</b>后台管理系统</a>
+    <a href="${ctx}"><b>天地窖</b>后台管理系统</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">登录以管理</p>
 
-    <form action="../../index2.html" method="post">
+    <form action="${ctx}/manager/verifyLogin" method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -47,7 +47,7 @@
     </form>
 
     <div class="social-auth-links text-center">
-      <p>- OR -</p>
+      <p>- 或者 -</p>
       <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
         Facebook</a>
       <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
