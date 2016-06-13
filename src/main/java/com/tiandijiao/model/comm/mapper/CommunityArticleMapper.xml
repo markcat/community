@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tiandijiao.dao.ICommunityArticleDao">
+	
+	
+	<select id="select"
+			parameterType="com.tiandijiao.pojo.vo.CommunityArticleVo"
+			resultType="com.tiandijiao.pojo.query.CommunityArticleQuery">
+		select *
+		from community_article		
+	</select>
+	
+	
+	<select id="selectById"
+			parameterType="com.tiandijiao.pojo.query.CommunityArticleQuery"
+			resultType="com.tiandijiao.pojo.vo.CommunityArticleVo">
+		select article.*
+		from community_article as article
+		where article.id = #{id}
+	</select>
+
+	
+	<insert id="insert" parameterType="com.tiandijiao.pojo.CommunityArticle">
+		 insert into community_article(
+        	id,
+			class_id,
+			title,
+			short_info,
+			content,
+			create_time,
+			status,
+			source,
+			sort_num,
+			list_image,
+			user_id,
+			read_times
+      ) values(
+        	#{id},
+			#{classId},
+			#{title},
+			#{shortInfo},
+			#{content},
+			#{createTime},
+			#{status},
+			#{source},
+			#{sortNum},
+			#{listImage},
+			#{userId},
+			#{readTimes}
+      )
+	</insert>
+	<!-- <select id="selectById"
+			parameterType="com.tiandijiao.model.comm.NewsArticle"
+			resultType="com.tiandijiao.model.comm.NewsArticle">
+		select *
+		from community_article
+		where id=#{id}	
+	</select> -->
+</mapper>
